@@ -1,0 +1,45 @@
+<nav class="display-grid container margin-xs content-fit-width">
+  <h3 class="margin-top-xs align-center">Filters</h3>
+  <div class="sub-header margin-top-xs no-margin content-fit-width">Launch Year</div>
+  <span class="display-grid">
+    <div *ngFor="let year of years">
+      <button
+        class="non-filter"
+        [ngClass]="{
+          'applied-filter': year.isSelected || year.value == yearApplied
+        }"
+        (click)="applyUserFilters('years', year, 'yearApplied')"
+      >
+        {{ year.value }}
+      </button>
+    </div>
+  </span>
+  <div class="sub-header margin-top-xs no-margin content-fit-width">Successful Launch</div>
+  <span class="display-grid">
+    <div *ngFor="let launch of launchValues">
+      <button
+        class="non-filter"
+        [ngClass]="{
+          'applied-filter': launch.isSelected || launch.value == launchSuccessful
+        }"
+        (click)="applyUserFilters('launchValues', launch, 'launchSuccessful')"
+      >
+        {{ launch.value }}
+      </button>
+    </div>
+  </span>
+  <div class="sub-header margin-top-xs no-margin content-fit-width">Successful Landing</div>
+  <span class="display-grid">
+    <div *ngFor="let landing of landingValues">
+      <button
+        class="non-filter"
+        [ngClass]="{
+          'applied-filter': landing.isSelected || landing.value == landSuccessful
+        }"
+        (click)="applyUserFilters('landingValues', landing, 'landSuccessful')"
+      >
+        {{ landing.value }}
+      </button>
+    </div>
+  </span>
+</nav>

@@ -1,0 +1,48 @@
+body {
+  background: #d3d3d3;
+  font-family: sans-serif;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.display-grid {
+  display: grid;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.margin-xs {
+  margin: 0.5em;
+}
+
+.margin-left-sm {
+  margin-left: 1em;
+}
+
+.margin-top-xs {
+  margin-top: 0.5;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.padding-small {
+  padding: 1em;
+}
+
+.padding-top-xs {
+  padding-top: 0.5em;
+}
+
+.padding-left-xs {
+  padding-left: 0.5em;
+}
+
+.content-fit-width {
+  width: fit-content;
+}
